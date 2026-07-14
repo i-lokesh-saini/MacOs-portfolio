@@ -2,7 +2,8 @@ import { useState } from 'react';
 import gsap from 'gsap';
 
 import { Dock, Navbar, Welcome } from '#components';
-import { Safari, Terminal, } from '#windows';
+import { Safari, Terminal, Resume, Finder } from '#windows';
+
 
 import { Draggable } from 'gsap/Draggable';
 gsap.registerPlugin(Draggable);
@@ -15,10 +16,12 @@ function App() {
     <main>
       <Navbar />
       <Welcome />
-      <Dock/>
+      <Dock />
 
       <Terminal />
       <Safari />
+      <Resume />
+      <Finder />
     </main>
   )
 }
