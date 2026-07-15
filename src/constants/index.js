@@ -119,7 +119,7 @@ const techStack = [
   {
     category: "Dev Tools",
     items: ["Git", "GitHub"],
-  },{
+  }, {
     category: "Design Tools",
     items: ["Figma", "Adobe XD"],
   },
@@ -187,31 +187,31 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: "/images/lokesh-3.jpg",
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: "/images/lokesh-5.jpg",
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    img: "/images/lokesh-6.jpg",
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    img: "/images/lokesh-4.jpg",
   },
 ];
 
 export {
-    navLinks,
-    navIcons,
-    dockApps,
-    blogPosts,
-    techStack,
-    socials,
-    photosLinks,
-    gallery,
+  navLinks,
+  navIcons,
+  dockApps,
+  blogPosts,
+  techStack,
+  socials,
+  photosLinks,
+  gallery,
 };
 
 const WORK_LOCATION = {
@@ -228,7 +228,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      windowPosition: "top-[10vh] left-10", // optional: Finder window position
       children: [
         {
           id: 1,
@@ -281,7 +281,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
+      windowPosition: "top-[20vh] right-20",
       children: [
         {
           id: 1,
@@ -334,7 +334,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      windowPosition: "top-[40vh] left-20",
       children: [
         {
           id: 1,
@@ -396,7 +396,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/lokesh.jpeg",
     },
     {
       id: 2,
@@ -405,7 +405,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/lokesh-2.jpeg",
     },
     {
       id: 3,
@@ -414,7 +414,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: "/images/lokesh-3.jpeg",
     },
     {
       id: 4,
@@ -424,9 +424,9 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: "/images/lokesh.jpeg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
+        "Hey! I’m lokesh 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
         "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
         "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
         "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
@@ -502,10 +502,11 @@ const WINDOW_CONFIG = {
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
-export { 
-    INITIAL_Z_INDEX, 
-    WINDOW_CONFIG, 
-    WORK_LOCATION, 
-    ABOUT_LOCATION, 
-    RESUME_LOCATION, 
-    TRASH_LOCATION};
+export {
+  INITIAL_Z_INDEX,
+  WINDOW_CONFIG,
+  WORK_LOCATION,
+  ABOUT_LOCATION,
+  RESUME_LOCATION,
+  TRASH_LOCATION
+};
