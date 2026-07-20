@@ -38,7 +38,7 @@ const Photo = () => {
                                 icon: "/public/images/image.png",
                                 kind: "File",
                                 fileType: "img",
-                                imageurl: img,
+                                imageUrl: img,
                             })}>
                                 <img src={img} alt={`Gallery Image ${id}`} />
                             </li>
