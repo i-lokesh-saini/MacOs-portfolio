@@ -1,3 +1,6 @@
+import { Wifi, Battery, ToggleRight, CircleUserRound } from "lucide-react";
+
+
 const navLinks = [
   {
     id: 1,
@@ -20,18 +23,22 @@ const navIcons = [
   {
     id: 1,
     img: "/icons/wifi.svg",
+    icon: "Wifi"
   },
   {
     id: 2,
     img: "/icons/search.svg",
+    icon: "Search"
   },
   {
     id: 3,
     img: "/icons/user.svg",
+    icon: "CircleUserRound"
   },
   {
     id: 4,
     img: "/icons/mode.svg",
+    icon: "ToggleRight"
   },
 ];
 
@@ -102,7 +109,7 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Angular", "Vannila JS"],
+    items: ["React JS", " JavaScript ES6", "Vannila JS"],
   },
   {
     category: "Styling",
@@ -110,7 +117,7 @@ const techStack = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express"],
+    items: ["Node.js", "Express", "REST Api", "JWT Auth"],
   },
   {
     category: "Database",
@@ -118,10 +125,10 @@ const techStack = [
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub"],
+    items: ["Git", "GitHub", "Postman", "VS Code"],
   }, {
     category: "Design Tools",
-    items: ["Figma", "Adobe XD"],
+    items: ["Figma", "Adobe XD", "Adobe Photoshop",],
   },
 ];
 
@@ -138,21 +145,21 @@ const socials = [
     text: "Platform",
     icon: "/icons/atom.svg",
     bg: "#4bcb63",
-    link: "https://jsmastery.com/",
+    link: "#",
   },
   {
     id: 3,
     text: "Twitter/X",
     icon: "/icons/twitter.svg",
     bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
+    link: "#",
   },
   {
     id: 4,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
     bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    link: "https://www.linkedin.com/in/lokesh-saini-525a383a2/",
   },
 ];
 
@@ -199,7 +206,7 @@ const gallery = [
   },
   {
     id: 4,
-    img: "/images/lokesh-4.jpg",
+    img: "/images/lokesh.jpeg",
   },
 ];
 
@@ -224,7 +231,7 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "Expense Tracker",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
@@ -232,35 +239,34 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "Expense Tracker Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "• Built a full-stack personal finance application with secure JWT based authentication and bcrypt password hashing, protecting all user financial data",
+            "• Designed an interactive analytics dashboard with Recharts, rendering bar, line, and pie charts for income/expense trends, including rolling 30- and 60-day summaries",
+            "• Engineered RESTful APIs in Express.js/MongoDB for transaction CRUD operations; integrated Multer for profile image uploads and XLSX export for downloadable financial reports",
           ],
         },
         {
           id: 2,
-          name: "nike.com",
+          name: "Expense-tracker.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+          href: "https://expensetrackerbylokesh.vercel.app/",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "nike.png",
+          name: "Expense-tracker.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-1.png",
+          imageUrl: "/images/expense-tracker.png",
         },
         {
           id: 5,
@@ -268,7 +274,7 @@ const WORK_LOCATION = {
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
-          href: "https://google.com",
+          href: "#",
           position: "top-60 right-20",
         },
       ],
@@ -277,7 +283,7 @@ const WORK_LOCATION = {
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "Digital Marketing Agency",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -285,35 +291,34 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "Digital Marketing Agency Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
           description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            "• Developed a responsive, multi-section marketing website with  dynamic routing for individual case-study pages via React Router",
+            "• Built a reusable, data-driven component library (navigation, service cards, team profiles, testimonials) powered by a centralized content layer, cutting duplicate code across pages",
+            "• Implemented a custom scroll-spy hook using the Intersection Observer API to sync navigation state with scroll position; added React Helmet Async for per-page SEO metadata",
           ],
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "velocity-digital.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+          href: "https://velocity-digital-agency.vercel.app/",
           position: "top-20 left-20",
         },
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
+          name: "velocity-digital.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
+          imageUrl: "/images/velocity-digital.png",
         },
         {
           id: 5,
@@ -321,7 +326,7 @@ const WORK_LOCATION = {
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
-          href: "https://google.com",
+          href: "#",
           position: "top-60 left-5",
         },
       ],
@@ -330,7 +335,7 @@ const WORK_LOCATION = {
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "Air Draw",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
@@ -338,35 +343,34 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "Air Draw Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+            "• Built a browser-baseddrawing app using MediaPipe Hands for real time hand tracking, rendering neon-style visual effects via the Canvas API",
+            "• Implemented gesture-recognition logic mapping five hand poses (index finger, open palm, fist, pinch, thumbs-up) to draw, erase, pause, drag, and color-cycle actions",
+            "• Designed a multi-layer canvas rendering pipeline (camera, glow, draw, overlay) with customizable brush size, glow intensity, color presets, and PNG export",
           ],
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "air-draw.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+          href: "https://i-lokesh-saini.github.io/HandAirDraw/",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "food-delivery-app.png",
+          name: "air-draw.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
+          imageUrl: "/images/air-draw.png",
         },
         {
           id: 5,
@@ -427,7 +431,7 @@ const ABOUT_LOCATION = {
       image: "/images/lokesh.jpeg",
       description: [
         "Hey! I’m lokesh 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
+        "I specialize in JavaScript, HTML, CSS, React, Git, GitHub, Responsive Design, and I love making things feel smooth, fast, and just a little bit delightful.",
         "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
         "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
       ],

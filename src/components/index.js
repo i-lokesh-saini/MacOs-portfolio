@@ -3,6 +3,7 @@ import Welcome from "#components/Welcome.jsx";
 import Dock from "#components/Dock.jsx";
 import WindowControls from "#components/WindowControls.jsx";
 import Home from "#components/Home.jsx";
+import QuickAccess from "#components/QuickAcess.jsx";
 
 export {
     Navbar,
@@ -10,5 +11,6 @@ export {
     Dock,
     WindowControls,
     Home,
+    QuickAccess
 
 };

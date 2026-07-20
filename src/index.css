@@ -11,6 +11,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 }
 
 @theme {
@@ -37,10 +38,10 @@ body {
   }
 
   nav {
-    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+    @apply flex justify-between items-center bg-white/50 dark:bg-neutral-950/30 backdrop-blur-3xl p-2 px-5 select-none;
 
     div {
-      @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
+      @apply flex items-center max-sm:w-full max-sm:justify-center gap-5 text-black dark:text-white;
 
       &:last-child {
         @apply max-sm:hidden;
@@ -56,7 +57,7 @@ body {
     }
 
     time {
-      @apply text-sm font-medium text-black;
+      @apply text-sm font-medium text-black dark:text-white;
     }
   }
 }
@@ -69,11 +70,30 @@ body {
   #welcome {
     @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
 
+    p {
+      @apply max-sm:text-base sm:text-3xl font-georama;
+    }
+
+    h1 {
+      @apply max-sm:text-4xl sm:text-9xl italic font-georama mt-7;
+    }
+
     .small-screen {
       @apply sm:hidden m-7 bg-red-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
 
       p {
         @apply flex-1 text-[16px] text-center font-roboto text-gray-400;
+      }
+    }
+  }
+
+  /* Disable hover on mobile */
+  @media (hover: none) {
+    #welcome {
+
+      p span,
+      h1 span {
+        @apply !font-normal;
       }
     }
   }
@@ -95,6 +115,26 @@ body {
       img {
         @apply object-cover object-center;
       }
+    }
+  }
+
+  #quick-access {
+    @apply hidden max-sm:flex absolute top-20 left-0 right-0 justify-center gap-4 z-40 select-none px-4;
+
+    button {
+      @apply p-3 rounded-lg bg-white/20 backdrop-blur-md hover:bg-white/30 transition-all;
+
+      img {
+        @apply w-6 h-6;
+      }
+    }
+  }
+
+  #status-bar {
+    /* @apply hidden max-sm:flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full; */
+
+    img {
+      @apply w-4 h-4;
     }
   }
 
@@ -237,7 +277,7 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-80 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply max-w-3xl absolute top-30 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .sidebar {
       @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
@@ -269,9 +309,11 @@ body {
       @apply p-5;
 
       ul {
-        @apply grid grid-cols-5 grid-rows-5 gap-2.5;
+        @apply grid grid-cols-5 grid-rows-3 gap-2.5;
 
         li {
+          @apply relative h-40 overflow-hidden rounded-xl;
+
           img {
             @apply size-full object-cover rounded-lg;
           }

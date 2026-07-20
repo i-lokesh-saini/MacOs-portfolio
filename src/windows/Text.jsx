@@ -20,7 +20,7 @@ const Text = () => {
             <div className="p-5 space-y-6 bg-white">
                 {image ? (
                     <div className="w-full">
-                        <img src={image} alt={name} className="w-full h-auto rounded" />
+                        <img src={image} alt={name} className="w-20 h-20 rounded-full" />
                     </div>
                 ) : null}
                 {subtitle ? <h3 className="text-lg font-bold">{subtitle}</h3> : null}
