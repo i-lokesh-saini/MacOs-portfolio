@@ -2,11 +2,11 @@ import { WindowControls } from "#components"
 import { socials } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper"
 
-const Contact = () => {
+const Contact = ({ isMobile }) => {
     return (
         <div>
             <div id="window-header">
-                <WindowControls target="contact" />
+                <WindowControls target="contact" isMobile={isMobile} />
                 <h2>Contact Me</h2>
             </div>
 

@@ -11,11 +11,11 @@ gsap.registerPlugin(Draggable);
 
 function App() {
 
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 639);
 
   useEffect(() => {
     const checkScreenSize = () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 639) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
@@ -38,20 +38,20 @@ function App() {
   return (
     <main>
       <Navbar isMobile={isMobile} />
-      {/* <QuickAccess /> */}
+      <QuickAccess />
       <Welcome isMobile={isMobile} />
-      <Dock />
+      <Dock ismobile={isMobile} />
 
-      <Terminal />
-      {/* <Safari /> */}
-      <Resume />
-      <Finder />
-      <Text />
-      <Image />
-      <Contact />
-      <Photo />
+      <Terminal isMobile={isMobile} />
+      <Safari isMobile={isMobile} />
+      <Resume isMobile={isMobile} />
+      <Finder isMobile={isMobile} />
+      <Text isMobile={isMobile} />
+      <Image isMobile={isMobile} />
+      <Contact isMobile={isMobile} />
+      <Photo isMobile={isMobile} />
 
-      <Home />
+      <Home isMobile={isMobile} />
     </main>
   )
 }

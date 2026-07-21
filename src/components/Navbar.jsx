@@ -12,14 +12,14 @@ const Navbar = ({ isMobile }) => {
         <>
             {isMobile ?
                 < nav className="">
-                    <div className="grid grid-cols-[2fr_3fr_2fr] justify-between">
+                    <div className="grid grid-cols-[2fr_3fr_2fr] justify-between  py-1.5">
                         <div className="flex justify-start">
-                            <time className="text-black dark:text-white">{dayjs().format('hh:mm A')}</time>
+                            <time className="text-black dark:text-white text-base font-normal">{dayjs().format('hh:mm A')}</time>
                         </div>
-                        <div className=" w-full max-sm:flex h-8 items-center gap-2 bg-black backdrop-blur-md rounded-full"> </div>
+                        <div className=" w-full max-sm:flex h-8 items-center bg-black backdrop-blur-md rounded-full"> </div>
                         <div className="flex items-center justify-end gap-3 text-black dark:text-white">
-                            <img src="/icons/wifi.svg" alt="wifi" className="icon-hover dark:invert" />
-                            <img src="/icons/battery.svg" alt="battery" className="icon-hover dark:invert" />
+                            <img src="/icons/wifi.svg" alt="wifi" className="icon-hover dark:invert size-5" />
+                            <img src="/icons/battery.svg" alt="battery" className="icon-hover dark:invert size-5" />
                         </div>
                     </div>
                 </nav>

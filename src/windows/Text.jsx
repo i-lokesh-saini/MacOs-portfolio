@@ -2,7 +2,7 @@ import WindowWrapper from "#hoc/WindowWrapper";
 import { WindowControls } from "#components";
 import useWindowStore from "#store/window"
 
-const Text = () => {
+const Text = ({ isMobile }) => {
     const { windows } = useWindowStore();
     const data = windows.txtfile?.data;
 
@@ -13,7 +13,7 @@ const Text = () => {
     return (
         <>
             <div id="window-header">
-                <WindowControls target="txtfile" />
+                <WindowControls target="txtfile" isMobile={isMobile} />
                 <h2>{name}</h2>
             </div>
 

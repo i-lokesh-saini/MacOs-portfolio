@@ -7,7 +7,7 @@ import clsx from "clsx"
 import useWindowStore from "#store/window"
 
 
-const Finder = () => {
+const Finder = ({ isMobile }) => {
     const { openWindow } = useWindowStore();
     const { activeLocation, setActiveLocation } = useLocationStore();
 
@@ -40,7 +40,7 @@ const Finder = () => {
     return (
         <>
             <div id="window-header">
-                <WindowControls target="finder" />
+                <WindowControls target="finder" isMobile={isMobile} />
                 <Search className="icon" />
             </div>
 

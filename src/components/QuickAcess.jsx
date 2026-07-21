@@ -5,22 +5,22 @@ const QuickAccess = () => {
 
     return (
         <section id="quick-access">
-            <button
-                type="button"
-                onClick={() => openWindow('resume')}
-                aria-label="Open Resume"
-                className="transition-transform active:scale-95"
-            >
-                <img src="/icons/file.svg" alt="Resume" loading="lazy" />
-            </button>
-            <button
-                type="button"
-                onClick={() => openWindow('terminal')}
-                aria-label="Open Skills"
-                className="transition-transform active:scale-95"
-            >
-                <img src="/icons/terminal.png" alt="Skills" loading="lazy" />
-            </button>
+            <div className="flex">
+                <button
+                    type="button"
+                    onClick={() => openWindow('resume')}
+                    className='dock-icon '
+                >
+                    <img src="/images/pages.png" alt="Resume" loading="lazy" />
+                </button>
+                <button
+                    type='button'
+                    className='dock-icon'
+                    onClick={() => openWindow('terminal')}
+                >
+                    <img src={`/images/terminal.png`} alt="terminal" loading='lazy' className="size-22" />
+                </button>
+            </div>
         </section>
     );
 };

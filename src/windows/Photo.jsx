@@ -4,14 +4,14 @@ import WindowWrapper from "#hoc/WindowWrapper";
 import useWindowStore from "#store/window";
 import { Mail, Search } from "lucide-react";
 
-const Photo = () => {
+const Photo = ({ isMobile }) => {
 
     const { openWindow } = useWindowStore();
 
     return (
         <>
             <div id="window-header">
-                <WindowControls target="photos" />
+                <WindowControls target="photos" isMobile={isMobile} />
                 <div className="w-full flex justify-end items-center gap-3 text-gray-400">
                     <Mail className='icon' />
                     <Search className="icon" />

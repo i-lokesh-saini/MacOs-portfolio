@@ -2,7 +2,7 @@ import { WindowControls } from '#components'
 import useWindowStore from '#store/window'
 import WindowWrapper from '#hoc/WindowWrapper'
 
-const ImageWindowContent = () => {
+const ImageWindowContent = ({ isMobile }) => {
     const { windows } = useWindowStore();
     const data = windows.imgfile?.data;
 
@@ -13,7 +13,7 @@ const ImageWindowContent = () => {
     return (
         <>
             <div id="window-header">
-                <WindowControls target="imgfile" />
+                <WindowControls target="imgfile" isMobile={isMobile} />
                 <h2>{name}</h2>
             </div>
 

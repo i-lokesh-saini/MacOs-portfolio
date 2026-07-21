@@ -3,11 +3,11 @@ import { techStack } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper";
 import { Check, Flag } from "lucide-react";
 
-const Terminal = () =>{
+const Terminal = ({ isMobile }) => {
     return (
         <>
             <div id="window-header">
-                <WindowControls target= "terminal" />
+                <WindowControls target="terminal" isMobile={isMobile} />
                 <h2>Tech Stack</h2>
             </div>
 
@@ -22,11 +22,11 @@ const Terminal = () =>{
                 </div>
 
                 <ul className="content">
-                    {techStack.map(({category, items}, index)=>(
+                    {techStack.map(({ category, items }, index) => (
                         <li key={`${category}-${index}`} className="flex items-center" >
                             <Check className="check" size={20} />
                             <h3>{category}</h3>
-                            <ul>{items.map((item, i)=>(
+                            <ul>{items.map((item, i) => (
                                 <li key={i}>{item} {i < items.length - 1 ? "," : ""}</li>
                             ))}</ul>
                         </li>
@@ -35,7 +35,7 @@ const Terminal = () =>{
 
                 <div className="footnote">
                     <p>
-                        <Check size={20}/> 5 of 5 stacks loaded successfully (100%)
+                        <Check size={20} /> 5 of 5 stacks loaded successfully (100%)
                     </p>
 
                     <p className="text-black">
@@ -48,7 +48,7 @@ const Terminal = () =>{
     );
 };
 
-const TerminalWindow = WindowWrapper(Terminal,'terminal')
+const TerminalWindow = WindowWrapper(Terminal, 'terminal')
 
 
 export default TerminalWindow;
